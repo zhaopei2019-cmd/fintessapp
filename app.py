@@ -46,7 +46,7 @@ def cv2_add_chinese_text(img, text, position, text_color=(0, 255, 0), text_size=
             img = Image.fromarray(cv2.cvtColor(img, cv2.COLOR_BGR2RGB))
         draw = ImageDraw.Draw(img)
         try:
-            font = ImageFont.truetype("msyh.ttc", text_size)
+            font = ImageFont.truetype("msyhbd.ttc", text_size)
         except:
             font = ImageFont.load_default()
         draw.text(position, text, fill=text_color, font=font, stroke_width=2, stroke_fill=(0, 0, 0))
